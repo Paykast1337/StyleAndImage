@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2245" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2245" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_authorization.xml" value="0.33" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_current.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_current_employee.xml" value="0.33" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_history.xml" value="0.33" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_history_by_entry.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_history_by_entry_employee.xml" value="0.25" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_history_employee.xml" value="0.33" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_main_employee.xml" value="0.33152173913043476" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_new_entry.xml" value="0.33" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_new_entry_employee.xml" value="0.33" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_new_records.xml" value="0.33" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_price.xml" value="0.3224431818181818" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_price_employee.xml" value="0.33" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_proveroka.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_records.xml" value="0.33" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_registration.xml" value="0.33" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/activity_write.xml" value="0.33" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/date_picker_style.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/proverka.xml" value="0.27" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/registration.xml" value="0.2578125" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/sadasd.xml" value="0.34375" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/spinner.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/spinner_dropdown_item.xml" value="0.365625" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/spinner_style.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/time_picker_stule.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/Dobro/AndroidStudioProjects/StyleAndImage/app/src/main/res/layout/time_picker_style.xml" value="0.67" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

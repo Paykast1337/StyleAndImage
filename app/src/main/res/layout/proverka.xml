@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_1"
+    tools:context=".NewRecords">
+
+    <TextView
+        android:id="@+id/headNewRecordsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Новая запись"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/dateClientNewRecordsEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="#FFFF"
+        android:ems="10"
+        android:hint="Дата"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headNewRecordsTextView" />
+
+    <EditText
+        android:id="@+id/timeClientNewRecordsEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="#FFFF"
+        android:ems="10"
+        android:hint="Время"
+        android:inputType="time"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateClientNewRecordsEditText" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/employeeClientSpinnerNewRecordsConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeClientNewRecordsEditText">
+
+
+        <Spinner
+            android:id="@+id/empoloyeeNewRecordsSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:animationCache="true"
+            android:backgroundTint="#8E24AA"
+            android:dropDownSelector="@android:drawable/arrow_down_float"
+            android:shape="rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewPriceClientSpinnerNewRecordsConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="25dp"
+        android:background="#FFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/employeeClientSpinnerNewRecordsConstraintLayout">
+
+        <Spinner
+            android:id="@+id/viewPriceNewRecordsSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:animationCache="true"
+            android:backgroundTint="#8E24AA"
+            android:dropDownSelector="@android:drawable/arrow_down_float"
+            android:shape="rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/priceNameClientSpinnerNewRecordsConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="25dp"
+        android:background="#FFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPriceClientSpinnerNewRecordsConstraintLayout">
+
+
+        <Spinner
+            android:id="@+id/priceNameNewRecordsSpinner"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:animationCache="true"
+            android:backgroundTint="#8E24AA"
+            android:dropDownSelector="@android:drawable/arrow_down_float"
+            android:shape="rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/okClientNewRecordsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="clickOk"
+        android:text="Записаться"
+        android:textColor="#8E24AA"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceNameClientSpinnerNewRecordsConstraintLayout" />
+
+    <TextView
+        android:id="@+id/errorNewRecordsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="100dp"
+        android:textColor="#FFFFFF"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/okClientNewRecordsButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_1"
+    tools:context=".History">
+
+    <TextView
+        android:id="@+id/headHistoryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="История"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/dataHistoryEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:hint=" Тел. или ФИО"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headHistoryTextView"
+        android:backgroundTint="#FFFF"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <Button
+        android:id="@+id/okHistoryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="clickOk"
+        android:text="ОК"
+        android:textColor="#8E24AA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dataHistoryEditText" />
+
+    <TextView
+        android:id="@+id/dataHistoryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Клиенты:"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/okHistoryButton" />
+
+    <TextView
+        android:id="@+id/dataClientHistoryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="10dp"
+        android:text=""
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/dataHistoryTextView"
+        app:layout_constraintTop_toTopOf="@+id/dataHistoryTextView" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="wrap"
+        android:layout_marginTop="10dp"
+        app:layout_constraintWidth_default="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dataClientHistoryTextView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/historyTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dataClientHistoryTextView">
+
+                <TableRow
+                    android:id="@+id/historyTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp">
+
+                    <TextView
+                        android:id="@+id/dateHistoryTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_margin="4px"
+                        android:layout_weight="1"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:maxWidth="50dp"
+                        android:padding="4px"
+                        android:text="Дата"
+                        android:textColor="#8E24AA"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/priceNameHistoryTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_margin="4px"
+                        android:layout_weight="8"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:padding="4px"
+                        android:text="Услуга"
+                        android:textColor="#8E24AA"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/priceHistoryTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_column="2"
+                        android:layout_margin="4px"
+                        android:layout_weight="4"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:maxWidth="10dp"
+                        android:padding="4px"
+                        android:text="Цена"
+                        android:textColor="#8E24AA"
+                        android:textSize="15sp" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/historyClientTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:scrollbars="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headHistoryTextView">
+
+                <TableRow
+                    android:id="@+id/historyClientTableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp">
+
+                    <TextView
+                        android:id="@+id/dateClientHistoryTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_margin="4px"
+                        android:layout_weight="1"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:maxWidth="50dp"
+                        android:padding="4px"
+                        android:text="Дата"
+                        android:textColor="#8E24AA"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/priceNameClientHistoryTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_margin="4px"
+                        android:layout_weight="8"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:padding="4px"
+                        android:text="Услуга"
+                        android:textColor="#8E24AA"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/priceClientHistoryTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_column="2"
+                        android:layout_margin="4px"
+                        android:layout_weight="4"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:maxWidth="10dp"
+                        android:padding="4px"
+                        android:text="Цена"
+                        android:textColor="#8E24AA"
+                        android:textSize="15sp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

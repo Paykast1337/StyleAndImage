@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_1"
+    tools:context=".Price">
+
+    <TextView
+        android:id="@+id/headPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Прайс лист"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/typeSpinnerPriceConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headPriceTextView">
+
+        <Spinner
+            android:id="@+id/typePriceSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:animationCache="true"
+            android:backgroundTint="#8E24AA"
+            android:dropDownSelector="@android:drawable/arrow_down_float"
+            android:shape="rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="572dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeSpinnerPriceConstraintLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/priceTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:id="@+id/priceTableRow"
+                    android:layout_marginBottom="1dp">
+
+                    <TextView
+                        android:id="@+id/priceNamePriceTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_margin="4px"
+                        android:scrollHorizontally="false"
+                        android:layout_weight="8"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:padding="4px"
+                        android:text="Услуга"
+                        android:textColor="#8E24AA"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/pricePriceTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_margin="4px"
+                        android:layout_weight="4"
+                        android:background="#FFFFFF"
+                        android:scrollHorizontally="false"
+                        android:gravity="center"
+                        android:maxWidth="10dp"
+                        android:padding="4px"
+                        android:text="Цена"
+                        android:textColor="#8E24AA"
+                        android:textSize="15sp" />
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

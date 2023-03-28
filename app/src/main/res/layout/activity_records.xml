@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/rectangle_1"
+    android:layout_height="match_parent"
+    tools:context=".Records">
+
+    <TextView
+        android:id="@+id/headRecordsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Действующие записи" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/spinnerRecordsConstraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:background="#ffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headRecordsTextView">
+
+        <Spinner
+            android:id="@+id/employeeRecordsSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:animationCache="true"
+            android:backgroundTint="#8E24AA"
+            android:dropDownSelector="@android:drawable/arrow_down_float"
+            android:shape="rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/dateRecordsEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="#FFFF"
+        android:ems="10"
+        android:hint="Выбор даты"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerRecordsConstraintLayout2" />
+
+    <Button
+        android:id="@+id/okRecordsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="clickOk"
+        android:text="ок"
+        android:textColor="#8E24AA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateRecordsEditText" />
+
+    <TableLayout
+        android:id="@+id/recordsTableLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/okRecordsButton">
+
+        <TableRow
+            android:id="@+id/recordsTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp">
+
+            <TextView
+                android:id="@+id/timeRecordsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_margin="4px"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:maxWidth="50dp"
+                android:padding="4px"
+                android:text="Время"
+                android:textColor="#8E24AA"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/klientRecordsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_margin="4px"
+                android:layout_weight="12"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="4px"
+                android:text="Данные клиента"
+                android:textColor="#8E24AA"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/priceNameRecordsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_margin="4px"
+                android:layout_weight="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="4px"
+                android:text="Услуга"
+                android:maxWidth="30dp"
+                android:textColor="#8E24AA"
+                android:textSize="15sp" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/recordsClientTableLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headRecordsTextView">
+
+        <TableRow
+            android:id="@+id/recordsClientTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp">
+
+            <TextView
+                android:id="@+id/dateTimeRecordsClientTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_margin="4px"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:maxWidth="50dp"
+                android:padding="4px"
+                android:text="Дата/\nВремя"
+                android:textColor="#8E24AA"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/employeeRecordsClientTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_margin="4px"
+                android:layout_weight="12"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="4px"
+                android:text="Мастер"
+                android:textColor="#8E24AA"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/priceNameRecordsClientTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_margin="4px"
+                android:layout_weight="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:maxWidth="30dp"
+                android:padding="4px"
+                android:text="Услуга"
+                android:textColor="#8E24AA"
+                android:textSize="15sp" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/modifyRecordsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Изменить"
+        android:textColor="#8E24AA"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/recordsTableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/recordsTableLayout" />
+
+    <TextView
+        android:id="@+id/errorRecordsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="10sp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modifyRecordsButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
