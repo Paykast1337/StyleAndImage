@@ -101,9 +101,7 @@ class Price : AppCompatActivity() {
     }
 
     fun connectPrice(meaning: String, sorter: String) :MutableList<DataClassPrice>{ //Функция записи результатов функции подключения к БД
-        val user = "fan651sh_sai" //Имя пользователя БД
-        val pass = "Dobro1337//" //Пароль к БД
-        val url = "jdbc:mysql://fan651sh.beget.tech:3306/fan651sh_sai" //Строка подключения (Библиотека_для_подключения_к_БД://ип:порт/Имя_бд)
+        
 
         val listPrice: MutableList<DataClassPrice> = mutableListOf() //создание списка
         thread { //Создание потока
